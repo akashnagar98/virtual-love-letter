@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffcccb;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 100px;
+    height: 150px;
+    border-radius: 100px 100px 0 0;
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart::after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #ff4757;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff6b81;
+}
